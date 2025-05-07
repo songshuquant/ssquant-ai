@@ -2,7 +2,7 @@
 
 ![版本](https://img.shields.io/badge/版本-1.0.0-blue)
 ![许可证](https://img.shields.io/badge/许可证-MIT-green)
-![logo](./ssquant-ai/assets/squirrel_quant_logo.png)
+![logo](./ssquant/assets/squirrel_quant_logo.png)
 
 一个基于AI的期货量化交易策略开发工具，结合人工智能与松鼠Quant量化交易框架，实现自然语言到可执行交易策略代码的转换。
 
