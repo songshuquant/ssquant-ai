@@ -1,0 +1,40 @@
+name: Python Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, '3.10']
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: 设置 Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f ai_cmd/requirements.txt ]; then pip install -r ai_cmd/requirements.txt; fi
+        pip install pytest flake8
+    - name: 运行代码风格检查
+      run: |
+        # 停止构建，如果存在 Python 语法错误或未定义的名称
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # 仅提出警告，不会停止构建
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: 运行测试
+      run: |
+        pytest
+      env:
+        # 测试环境变量，避免使用实际API密钥
+        OPENAI_API_KEY: "test_key"
+        OPENAI_API_URL: "https://api.example.com/v1"
+        GPT_MODEL: "gpt-4o" 
