@@ -38,7 +38,13 @@ pip install -r ai_cmd/requirements.txt
 ```
 
 4. 配置环境变量
-创建`ai_cmd/.env`文件，填入：
+创建`ai_cmd/.env`文件，基于提供的示例文件：
+```bash
+# 复制示例环境文件
+cp ai_cmd/.env.example ai_cmd/.env
+# 编辑文件，填入您的实际配置
+```
+然后编辑`.env`文件，填入：
 ```dotenv
 OPENAI_API_KEY="你的OpenAI密钥"
 OPENAI_API_URL="https://api.openai.com/v1"  # 或您的API代理地址
