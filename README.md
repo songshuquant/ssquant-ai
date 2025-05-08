@@ -1,10 +1,14 @@
 # ssquant-ai 松鼠QuantAI策略开发助手
 
 ![版本](https://img.shields.io/badge/版本-1.0.0-blue)
-![许可证](https://img.shields.io/badge/许可证-MIT-green)
+![许可证](https://img.shields.io/badge/许可证-专有许可-red)
 ![logo](./ssquant/assets/squirrel_quant_logo.png)
 
 一个基于AI的期货量化交易策略开发工具，结合人工智能与松鼠Quant量化交易框架，实现自然语言到可执行交易策略代码的转换。
+
+## ⚠️ 许可声明
+
+**本项目仅供个人学习、研究和非商业用途使用。未经版权所有者明确书面许可，禁止将本软件用于任何商业目的。详情请查看[LICENSE](LICENSE)文件。**
 
 ## 🚀 功能特点
 
@@ -38,7 +42,8 @@ pip install -r ai_cmd/requirements.txt
 ```
 
 4. 配置环境变量
-创建`ai_cmd/.env`文件，然后编辑`.env`文件，填入：
+创建`ai_cmd/.env`文件，填入：
+
 ```dotenv
 OPENAI_API_KEY="你的OpenAI密钥"
 OPENAI_API_URL="https://api.openai.com/v1"  # 或您的API代理地址
@@ -96,7 +101,9 @@ python main.py
 
 ## 📝 许可证
 
-本项目采用MIT许可证 - 详情请查看 [LICENSE](LICENSE) 文件
+本项目采用专有许可证 - 详情请查看 [LICENSE](LICENSE) 文件。商业使用需获得授权，请联系版权所有者：
+- 邮箱：339093103@qq.com
+- 网站：quant789.com
 
 ## 📢 免责声明
 
