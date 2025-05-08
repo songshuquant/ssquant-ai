@@ -114,7 +114,7 @@ dmypy.json
 .pyre/
 
 # 项目特定忽略
-data_cache/
+# data_cache/  # 允许上传模拟数据
 ai_cmd/cache/
 */.DS_Store
 .DS_Store
@@ -125,4 +125,8 @@ ai_cmd/cache/
 ai_cmd/.env
 
 # 策略生成文件
-策略_*.py 
+策略_*.py
+
+# 大数据文件
+*.db
+*.dat 

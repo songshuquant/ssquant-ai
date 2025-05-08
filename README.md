@@ -95,7 +95,10 @@ python main.py
 │   ├── code_parser.py   # 代码解析工具
 │   ├── config.py        # 配置文件
 │   └── requirements.txt # 依赖列表
-├── data_cache/          # 数据缓存目录
+├── data_cache/          # 数据缓存目录（包含模拟生成的示例数据）
+│   ├── au888_*.csv      # 黄金期货模拟数据
+│   ├── tick_data_*.csv  # Tick级别模拟数据
+│   └── 生成模拟*.py      # 数据生成脚本
 └── examples/            # 策略示例
     ├── 双均线策略.py
     ├── 海龟交易策略.py
